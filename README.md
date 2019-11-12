@@ -54,5 +54,5 @@ end
 - [x] `left + right` Arithmetic addition.
 - [ ] `-value` Arithmetic unary minus.
 - [x] `left - right` Arithmetic subtraction.
-- [ ] `left / right` Arithmetic division.
+- [x] `left / right` Arithmetic division.
 - [ ] `abs(number)` Returns an integer or float which is the arithmetical absolute value of number.

@@ -27,4 +27,12 @@ defmodule TallyTest do
 
     assert actual == 1
   end
+
+  test "division" do
+    calc do
+      actual = 6 / 2
+    end
+
+    assert actual == 3
+  end
 end
