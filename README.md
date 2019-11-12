@@ -1,21 +1,25 @@
 # Tally
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `tally` to your list of dependencies in `mix.exs`:
+Tally provides a macro and protocol enabling the use of infix operators (e.g. `+`, `-` `*`, `/`)
+with complex types such as [Decimal](https://hexdocs.pm/decimal/). This makes writing calculations
+more natural. For example, without Tally:
 
 ```elixir
-def deps do
-  [
-    {:tally, "~> 0.1.0"}
-  ]
-end
+a = Decimal.new(1)
+b = Decimal.new(2)
+
+c =  Decimal.add(a, b)
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/tally](https://hexdocs.pm/tally).
+With Tally:
 
+```elixir
+use Tally
+
+a = Decimal.new(1)
+b = Decimal.new(2)
+
+calc do
+  c = a + b
+end
+```
