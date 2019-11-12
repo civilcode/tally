@@ -35,6 +35,18 @@ provides a default fallback implementation that retains the existing behaviour o
 implementation for `Decimal` is also provided and is only compiled if you include the `decimal`
 package in your `mix` file as a dependency.
 
+You can implement the `Tally.Protocol` for your own or third-party libraries such as `Money`
+giving you a natural, infix implementation for money calculations.
+
+```elixir
+calc do
+  a = Money.new(100)
+  b = Money.new(200)
+
+  c = a + b
+end
+```
+
 ## To-do
 
 - [ ] `left * right` Arithmetic multiplication.
