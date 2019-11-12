@@ -34,3 +34,13 @@ Tally uses a protocol, `Tally.Protocol` to dynamically dispatch arithmetic opera
 provides a default fallback implementation that retains the existing behaviour of Elixir. An
 implementation for `Decimal` is also provided and is only compiled if you include the `decimal`
 package in your `mix` file as a dependency.
+
+## To-do
+
+- [ ] `left * right` Arithmetic multiplication.
+- [ ] `+value` Arithmetic unary plus.
+- [x] `left + right` Arithmetic addition.
+- [ ] `-value` Arithmetic unary minus.
+- [ ] `left - right` Arithmetic subtraction.
+- [ ] `left / right` Arithmetic division.
+- [ ] `abs(number)` Returns an integer or float which is the arithmetical absolute value of number.
