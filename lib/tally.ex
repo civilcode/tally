@@ -5,8 +5,10 @@ defprotocol Tally.Protocol do
   def add(left, right)
 end
 
-defimpl Tally.Protocol, for: Decimal do
-  def add(left, right), do: Decimal.add(left, right)
+if Code.ensure_compiled?(Decimal) do
+  defimpl Tally.Protocol, for: Decimal do
+    def add(left, right), do: Decimal.add(left, right)
+  end
 end
 
 defimpl Tally.Protocol, for: Any do
