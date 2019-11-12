@@ -53,6 +53,6 @@ end
 - [ ] `+value` Arithmetic unary plus.
 - [x] `left + right` Arithmetic addition.
 - [ ] `-value` Arithmetic unary minus.
-- [ ] `left - right` Arithmetic subtraction.
+- [x] `left - right` Arithmetic subtraction.
 - [ ] `left / right` Arithmetic division.
 - [ ] `abs(number)` Returns an integer or float which is the arithmetical absolute value of number.
