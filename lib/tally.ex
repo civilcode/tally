@@ -1,3 +1,18 @@
+defprotocol Tally.Protocol do
+  @fallback_to_any true
+
+  @doc "Arithmetic addition."
+  def add(left, right)
+end
+
+defimpl Tally.Protocol, for: Decimal do
+  def add(left, right), do: Decimal.add(left, right)
+end
+
+defimpl Tally.Protocol, for: Any do
+  def add(left, right), do: left + right
+end
+
 defmodule Tally do
   @moduledoc """
   Tally provides a macro and protocol enabling the use of infix operators (e.g. `+`, `-` `*`, `/`)
@@ -9,15 +24,7 @@ defmodule Tally do
     import Kernel, except: [+: 2]
 
     def left + right do
-      do_add(left, right)
-    end
-
-    defp do_add(%Decimal{} = left, %Decimal{} = right) do
-      Decimal.add(left, right)
-    end
-
-    defp do_add(left, right) do
-      Kernel.+(left, right)
+      Tally.Protocol.add(left, right)
     end
   end
 
