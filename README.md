@@ -49,7 +49,7 @@ end
 
 ## To-do
 
-- [ ] `left * right` Arithmetic multiplication.
+- [x] `left * right` Arithmetic multiplication.
 - [ ] `+value` Arithmetic unary plus.
 - [x] `left + right` Arithmetic addition.
 - [ ] `-value` Arithmetic unary minus.

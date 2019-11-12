@@ -4,25 +4,19 @@ defmodule TallyTest do
 
   use Tally
 
-  describe "addition" do
-    test "with a simple type" do
-      calc do
-        actual = 1 + 2
-      end
-
-      assert actual == 3
+  test "multiplication" do
+    calc do
+      actual = 2 * 3
     end
 
-    test "with a complex type" do
-      calc do
-        a = Decimal.new(1)
-        b = Decimal.new(2)
+    assert actual == 6
+  end
 
-        actual = a + b
-      end
-
-      expected = Decimal.new(3)
-      assert Decimal.equal?(actual, expected)
+  test "addition" do
+    calc do
+      actual = 1 + 2
     end
+
+    assert actual == 3
   end
 end
